@@ -12,6 +12,42 @@ export namespace StringFormat {
 
         return tokens.join(',')
     }
+
+    export function byteSizeToString(n: number | bigint): string {
+        if (n < (1n << 10n)) {
+            return '1KB 미만'
+        } else if (n < (1n << 20n)) {
+            if (typeof n === 'number') {
+                return commaString(n >> 10) + 'KB'
+            } else {
+                return commaString(n >> 10n) + 'KB'
+            }
+        } else if (n < (1n << 30n)) {
+            if (typeof n === 'number') {
+                return commaString(n >> 20) + 'MB'
+            } else {
+                return commaString(n >> 20n) + 'MB'
+            }
+        } else if (n < (1n << 40n)) {
+            if (typeof n === 'number') {
+                return commaString(n >> 30) + 'GB'
+            } else {
+                return commaString(n >> 30n) + 'GB'
+            }
+        } else if (n < (1n << 50n)) {
+            if (typeof n === 'number') {
+                return commaString(n >> 40) + 'TB'
+            } else {
+                return commaString(n >> 40n) + 'TB'
+            }
+        } else {
+            if (typeof n === 'number') {
+                return commaString(n >> 50) + 'PB'
+            } else {
+                return commaString(n >> 50n) + 'PB'
+            }
+        }
+    }
 }
 
 export namespace DateFormat {
