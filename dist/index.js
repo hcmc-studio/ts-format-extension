@@ -78,8 +78,7 @@ export var DateFormat;
             hourCycle: 'h23',
             minute: '2-digit',
             second: '2-digit',
-            fractionalSecondDigits,
-            timeZoneName: 'long'
+            fractionalSecondDigits
         }).replace(',', '.');
     }
     DateFormat.tableDateTime = tableDateTime;
