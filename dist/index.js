@@ -88,7 +88,7 @@ export var URLFormat;
     function buildPath(arg0, ...args) {
         for (const arg of args) {
             if (arg !== undefined) {
-                arg0 += '/' + arg;
+                arg0 += '/' + String(arg);
             }
         }
         return arg0;

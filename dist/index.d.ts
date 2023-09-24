@@ -12,5 +12,5 @@ export declare namespace DateFormat {
     function tableDateTime(d: Date, timeZone?: string, fractionalSecondDigits?: 3 | 1 | 2 | undefined): string;
 }
 export declare namespace URLFormat {
-    function buildPath(arg0: string, ...args: (string | undefined)[]): string;
+    function buildPath(arg0: string, ...args: (any | undefined)[]): string;
 }
