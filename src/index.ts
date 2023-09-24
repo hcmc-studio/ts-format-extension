@@ -75,3 +75,15 @@ export namespace DateFormat {
         }).replace(',', '.')
     }
 }
+
+export namespace URLFormat {
+    export function buildPath(arg0: string, ...args: (string | undefined)[]): string {
+        for (const arg of args) {
+            if (arg !== undefined) {
+                arg0 += '/' + arg
+            }
+        }
+
+        return arg0
+    }
+}

@@ -83,3 +83,15 @@ export var DateFormat;
     }
     DateFormat.tableDateTime = tableDateTime;
 })(DateFormat || (DateFormat = {}));
+export var URLFormat;
+(function (URLFormat) {
+    function buildPath(arg0, ...args) {
+        for (const arg of args) {
+            if (arg !== undefined) {
+                arg0 += '/' + arg;
+            }
+        }
+        return arg0;
+    }
+    URLFormat.buildPath = buildPath;
+})(URLFormat || (URLFormat = {}));
