@@ -77,7 +77,7 @@ export namespace DateFormat {
 }
 
 export namespace URLFormat {
-    export function buildPath(arg0: string, ...args: (any | undefined)[]): string {
+    export function buildPath(arg0: string, ...args: any[]): string {
         for (const arg of args) {
             if (arg !== undefined) {
                 arg0 += '/' + String(arg)
