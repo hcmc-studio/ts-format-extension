@@ -1,3 +1,13 @@
+export namespace BooleanFormat {
+    export function toString(b: boolean): string {
+        if (b) {
+            return '여'
+        } else {
+            return '부'
+        }
+    }
+}
+
 export namespace StringFormat {
     export function commaString(n: number | bigint): string {
         const s = n.toString()

@@ -1,3 +1,15 @@
+export var BooleanFormat;
+(function (BooleanFormat) {
+    function toString(b) {
+        if (b) {
+            return '여';
+        }
+        else {
+            return '부';
+        }
+    }
+    BooleanFormat.toString = toString;
+})(BooleanFormat || (BooleanFormat = {}));
 export var StringFormat;
 (function (StringFormat) {
     function commaString(n) {
