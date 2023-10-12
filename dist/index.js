@@ -74,13 +74,22 @@ export var StringFormat;
 })(StringFormat || (StringFormat = {}));
 export var DateFormat;
 (function (DateFormat) {
+    function tableDate(d, timeZone = 'Asia/Seoul') {
+        return d.toLocaleString('sv-SE', {
+            timeZone,
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit'
+        });
+    }
+    DateFormat.tableDate = tableDate;
     /**
      * 모든 시간 처리는 UTC를 기준삼아 작동 중이라는 가정에서, 클라이언트에게 최종적으로 표시되는 시각은 Asia/Seoul로 조정해야 함
      * @param d 변환할 Date
      * @param timeZone 변환할 대상 timezone(기본=Asia/Seoul)
      * @param fractionalSecondDigits 밀리초 표시 자릿수(기본=3)
      */
-    function tableDateTime(d, timeZone = 'Asia/Seoul', fractionalSecondDigits = undefined) {
+    function tableDateTime(d, fractionalSecondDigits = undefined, timeZone = 'Asia/Seoul') {
         return d.toLocaleString('sv-SE', {
             timeZone,
             year: 'numeric',
