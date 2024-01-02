@@ -1,17 +1,17 @@
 {
   "name": "ts-format-extension",
-  "version": "0.0.55",
-  "hcmcExtensionVersion": "0.0.54",
+  "version": "0.0.67",
+  "hcmcExtensionVersion": "0.0.66",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rm -rf dist && tsc -p tsconfig.json",
-    "push": "npm install && npm run build && ../bin/push 0.0.55 ts-format-extension"
+    "push": "npm install && npm run build && ../bin/push 0.0.67 ts ts-format-extension"
   },
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.3"
   }
 }
